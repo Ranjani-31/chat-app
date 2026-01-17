@@ -1,106 +1,265 @@
-# chat-app
-## 💬 Real-Time Chat Application
+# Instagram Clone – Full Stack MERN Application
 
-A full-stack real-time communication platform supporting one-to-one chat, group chat, voice calls, video calls, and status updates, built with modern web technologies and scalable architecture principles.
+A scalable, production-oriented Instagram-like social media platform built to demonstrate strong full-stack engineering skills, including authentication, real-time features, feed algorithms, performance optimization, and clean system design.
 
-## 📌 Overview
+## 🚀 Project Overview
 
-This project is a real-time chat application designed to replicate and understand the core architecture behind modern messaging platforms. It focuses on real-time systems, low-latency communication, secure authentication, and scalable backend design.
+This project is not just a UI clone. It is a feature-complete social media system designed with real-world engineering principles such as secure authentication, optimized database queries, scalable feed generation, and real-time communication.
 
-The application enables users to communicate seamlessly through text, voice, and video while maintaining performance, reliability, and security.
+## 🧩 Tech Stack
+- Frontend
 
-## 🚀 Features
-- 🔐 Authentication & Security
+- React.js
 
-- User registration and login
+- React Router v6
 
-- JWT-based authentication
+- Custom Hooks
 
-- Secure password hashing
+- Socket.io Client
 
-- Protected routes and role-based access
+## Backend
 
-## 💬 Messaging
+- Node.js
 
-- One-to-one real-time chat
+- Express.js
 
-- Group chat with admin controls
+- MongoDB (Mongoose)
 
-- Message delivery & read receipts
+- JWT Authentication
 
-- Typing indicators
+- Socket.io
 
-- Online/offline presence
+- Redis (Caching)
 
-- Message timestamps
+## DevOps & Tools
 
-- Soft delete messages
+- Docker
 
-## 👥 Group Chats
+- Nginx
 
-- Create and manage groups
+- Cloudinary (Media storage)
 
-- Add/remove participants
+- Postman (API Documentation)
 
-- Group admin privileges
+- Git & GitHub
 
-- Group metadata (name, image)
+## 🔐 Authentication & Security
 
-## 📞 Voice Calls
+- Secure login & signup (JWT access + refresh tokens)
 
-- One-to-one real-time voice calls
+- Password hashing with bcrypt
 
-- Call accept / reject
+- Protected routes (frontend & backend)
 
-- Call duration tracking
+- Role-based authorization
 
-- Missed call history
+- Input validation & sanitization
 
-## 🎥 Video Calls
+- Rate limiting & secure headers
 
-- One-to-one video calls
+## 👤 User Features
 
-- Camera and microphone controls
+- User registration & login
 
-- Call reconnection handling
+- Profile creation & editing
 
-- Adaptive streaming
+- Profile picture & bio
 
-## Status Feature
+- Public & private accounts
 
-- Text / image / video status
+- Follow / unfollow users
 
-- 24-hour auto-expiry
+- Follow request approval system
 
-- View tracking
+- Followers & following lists
 
-- Privacy control
+## 📸 Post Features
 
-## 🔔 Notifications
+- Image upload (Cloudinary)
 
-- New message alerts
+- Multiple images per post (carousel)
 
-- Incoming call notifications
+- Captions & hashtags
 
-- Offline notification handling
+- Like / unlike posts (idempotent APIs)
 
-## 📁 Media Sharing
+- Comment & reply system
 
-- Image, video, and audio messages
+- Edit & delete posts (ownership validation)
 
-- File size validation
+- Infinite scrolling feed
 
-- Secure media URLs
+## 📰 Feed & Discovery
 
-## System Design Highlights
-- Real-time messaging using WebSockets
+- Personalized user feed
 
-- Voice & video calling using WebRTC
+- Feed ranking based on:
 
-- Stateless backend for scalability
+- Recency
 
-- Redis for presence and socket mapping
+- Engagement (likes & comments)
 
-- Optimized database queries with indexing
+- Cursor-based pagination
 
-- Separation of concerns (API, sockets, media)
+- Explore feed (trending & non-followed posts)
+
+- Hashtag-based discovery
+
+## ⏱️ Stories
+
+- 24-hour auto-expiring stories
+
+- Story views tracking
+
+- Viewer list
+
+- Cron-based cleanup for expired stories
+
+## 🔔 Real-Time Features
+
+- Real-time notifications (Socket.io)
+
+-  Notifications for:
+
+  1. Likes
+
+  2. Comments
+
+  3. Follows
+
+- Read / unread notification status
+
+- Live comment updates
+
+- 🔍 Search
+
+- User search (username & name)
+
+- Hashtag search
+
+- Debounced search input
+
+- Indexed MongoDB queries for performance
+
+## 🛠️ Admin & Moderation
+
+- Admin dashboard
+
+- Reported posts management
+
+- User suspension / banning
+
+- Content removal
+
+- Platform analytics (DAU, posts/day)
+
+## ⚡ Performance Optimizations
+
+- Redis caching for:
+
+- Feed data
+
+- User profiles
+
+- MongoDB indexing strategy
+
+- Optimized aggregation pipelines
+
+- Lazy loading & skeleton screens
+
+- Optimistic UI updates
+
+## 🗂️ Database Design
+
+- Main Collections:
+
+  1. Users
+
+  2. Posts
+
+  3. Comments
+
+  4. Likes
+
+  5. Follows
+
+  6. Notifications
+
+  7. Stories
+
+- Key Design Decisions:
+
+  1. Prevent duplicate likes
+
+  2. Soft deletes for critical data
+
+  3. Efficient follower/following queries
+
+  4. Indexed frequently accessed fields
+
+## 📐 System Architecture
+
+- RESTful API with versioning
+
+- Event-driven notification system
+
+- Real-time layer using WebSockets
+
+- Modular backend architecture
+
+- Feature-based frontend structure
+
+## 📄 API Documentation
+
+Postman UI available at:
+/api/docs
+
+## 🧪 Environment Variables
+    Backend (.env)
+    PORT=5000
+    MONGO_URI=your_mongodb_url
+    JWT_SECRET=your_jwt_secret
+    JWT_REFRESH_SECRET=your_refresh_secret
+    CLOUDINARY_NAME=your_cloudinary_name
+    CLOUDINARY_API_KEY=your_key
+    CLOUDINARY_API_SECRET=your_secret
+    REDIS_URL=your_redis_url
+
+## ▶️ Getting Started
+    Clone the Repository
+    git clone https://github.com/your-username/instagram-clone.git
+
+## Install Dependencies
+    cd backend
+    npm install
+
+    cd frontend
+    npm install
+
+## Run the Application
+### # Backend
+    npm run dev
+
+### Frontend
+    npm start
+
+## 🐳 Docker Support
+    docker-compose up --build
+
+## 📌 Future Enhancements
+
+- AI-based content recommendations
+
+- Caption generation
+
+- Image moderation (NSFW detection)
+
+- Push notifications
+
+- PWA offline support
+
+- Multi-language support
+
+## ⭐ Acknowledgements
+
+**Inspired by modern social media platforms and built for learning, experimentation, and professional growth.**
